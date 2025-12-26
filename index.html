@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <h2>Spotify</h2>
+            </div>
+
+            <div class="nav-links">
+                <ul class="menu">
+                    <li>Home</li>
+                    <li>Search</li>
+                    <li>Your Library</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <div class="nav-links secondary-nav">
+                <ul class="playlist">
+                    <li>Create Playlist</li>
+                    <li>Liked Songs</li>
+                    <li>My Playlist</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="top-bar">
+                <div class="nav-navigation">
+                    <div class="search">
+                        <input type="text" placeholder="What do you want to play?">
+                    </div>
+                </div>
+                <div class="user-profile">
+                    <button>Sign Up</button>
+                    <button class="login-btn">Log In</button>
+                </div>
+            </div>
+
+            <h1>Good Morning!!</h1>
+
+            <div class="cards-container">
+                <div class="card-small">
+                    <img src="image/like.png" alt="Liked Songs">
+                    <span>Liked Songs</span>
+                    <button class="play-btn"><i class="fa-solid fa-play"></i></button>
+                </div>
+                <div class="card-small">
+                    <img src="image/rock.png" alt="Rock">
+                    <span>Rock Classics</span>
+                    <button class="play-btn"><i class="fa-solid fa-play"></i></button>
+                </div>
+                <div class="card-small">
+                    <img src="image/chill.png" alt="Chill">
+                    <span>Chill Vibes</span>
+                    <button class="play-btn"><i class="fa-solid fa-play"></i></button>
+                </div>
+                <div class="card-small">
+                    <img src="image/jazz.png" alt="Jazz">
+                    <span>Jazz for Study</span>
+                    <button class="play-btn"><i class="fa-solid fa-play"></i></button>
+                </div>
+                <div class="card-small">
+                    <img src="image/pop.png" alt="Pop">
+                    <span>Pop Hits</span>
+                    <button class="play-btn"><i class="fa-solid fa-play"></i></button>
+                </div>
+                <div class="card-small">
+                    <img src="image/podcast.png" alt="Pod">
+                    <span>Daily Podcast</span>
+                    <button class="play-btn"><i class="fa-solid fa-play"></i></button>
+                </div>
+            </div>
+
+            <h2>Made For You</h2>
+            <div class="cards-medium-container">
+                <div class="card-medium">
+                    <img src="image/daily1.png" alt="Mix 1">
+                    <h3>Daily Mix 1</h3>
+                    <p>Made for Nishtha</p>
+                    <button class="play-btn"><i class="fa-solid fa-play"></i></button>
+                </div>
+                <div class="card-medium">
+                    <img src="image/daily2.png" alt="Mix 2">
+                    <h3>Daily Mix 2</h3>
+                    <p>Hits from 2010s</p>
+                    <button class="play-btn"><i class="fa-solid fa-play"></i></button>
+                </div>
+                <div class="card-medium">
+                    <img src="image/discover.png" alt="Mix 3">
+                    <h3>Discover Weekly</h3>
+                    <p>New music for you</p>
+                    <button class="play-btn"><i class="fa-solid fa-play"></i></button>
+                </div>
+                <div class="card-medium">
+                    <img src="image/radar.png" alt="Mix 4">
+                    <h3>Release Radar</h3>
+                    <p>Catch up on releases</p>
+                    <button class="play-btn"><i class="fa-solid fa-play"></i></button>
+                </div>
+            </div>
+
+            <h2>Recently Played</h2>
+            <div class="cards-medium-container">
+                <div class="card-medium">
+                    <img src="image/podcast.png" alt="Podcast">
+                    <h3>Tech Talks</h3>
+                    <p>Podcast • Technology</p>
+                    <button class="play-btn"><i class="fa-solid fa-play"></i></button>
+                </div>
+                <div class="card-medium">
+                    <img src="image/indie.png" alt="Indie">
+                    <h3>Indie Folk</h3>
+                    <p>Playlist • Spotify</p>
+                    <button class="play-btn"><i class="fa-solid fa-play"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="music-player">
+        <div class="song-bar">
+            <div class="song-infos">
+                <div class="image-container">
+                    <img src="image/ishq.png" alt="Album Art">
+                </div>
+                <div class="song-description">
+                    <p class="title">Ishq Wala Love</p>
+                    <p class="artist">Vishal-Shekar</p>
+                </div>
+                <button class="icon-btn like-btn">
+                    <i class="fa-solid fa-heart"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="progress-controller">
+            <div class="control-buttons">
+                <button class="icon-btn shuffle-btn" title="Shuffle">
+                    <i class="fa-solid fa-shuffle"></i>
+                </button>
+
+                <button class="icon-btn prev-btn" title="Previous">
+                    <i class="fa-solid fa-backward-step"></i>
+                </button>
+
+                <button class="play-pause-btn" title="Play">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+
+                <button class="icon-btn next-btn" title="Next">
+                    <i class="fa-solid fa-forward-step"></i>
+                </button>
+
+                <button class="icon-btn repeat-btn" title="Repeat">
+                    <i class="fa-solid fa-repeat"></i>
+                </button>
+            </div>
+
+            <div class="progress-container">
+                <span class="time-current">0:24</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 20%;"></div>
+                    <div class="progress-handle"></div>
+                </div>
+                <span class="time-total">3:15</span>
+            </div>
+        </div>
+
+        <div class="other-features">
+            <button class="icon-btn queue-btn" title="Queue">
+            </button>
+
+            <button class="icon-btn devices-btn" title="Connect to a device">
+                <i class="fa-solid fa-laptop"></i>
+            </button>
+
+            <div class="volume-control">
+                <button class="icon-btn volume-btn" title="Mute">
+                    <i class="fa-solid fa-volume-high"></i>
+                </button>
+                <div class="volume-bar">
+                    <div class="progress-bar volume-progress">
+                        <div class="progress" style="width: 70%;"></div>
+                        <div class="progress-handle"></div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="icon-btn fullscreen-btn" title="Full screen">
+                <i class="fa-solid fa-compress"></i>
+            </button>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
