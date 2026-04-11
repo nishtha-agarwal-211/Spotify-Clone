@@ -1,211 +1,363 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify - Web Player: Music for everyone</title>
+    <meta name="description" content="Spotify Web Player - Stream music, discover new artists, and enjoy your personalized playlists.">
+    <title>Spotify - Music for everyone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
+    <div class="app-wrapper">
 
-    <div class="container">
-        <div class="sidebar">
-            <div class="logo">
-                <h2>Spotify</h2>
-            </div>
-
-            <div class="nav-links">
-                <ul class="menu">
-                    <li>Home</li>
-                    <li>Search</li>
-                    <li>Your Library</li>
-                </ul>
-            </div>
-
-            <hr>
-
-            <div class="nav-links secondary-nav">
-                <ul class="playlist">
-                    <li>Create Playlist</li>
-                    <li>Liked Songs</li>
-                    <li>My Playlist</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="main">
-            <div class="top-bar">
-                <div class="nav-navigation">
-                    <div class="search">
-                        <input type="text" placeholder="What do you want to play?">
-                    </div>
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-top">
+                <div class="logo">
+                    <i class="fa-brands fa-spotify"></i>
+                    <span>Spotify</span>
                 </div>
+
+                <nav class="nav-links" aria-label="Main Navigation">
+                    <ul class="menu">
+                        <li class="active" id="nav-home">
+                            <i class="fa-solid fa-house"></i>
+                            <span>Home</span>
+                        </li>
+                        <li id="nav-search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <span>Search</span>
+                        </li>
+                        <li id="nav-library">
+                            <i class="fa-solid fa-book-open"></i>
+                            <span>Your Library</span>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="sidebar-divider"></div>
+
+                <nav class="nav-links" aria-label="Playlist Navigation">
+                    <ul class="playlist">
+                        <li id="nav-create">
+                            <span class="icon-circle"><i class="fa-solid fa-plus"></i></span>
+                            <span>Create Playlist</span>
+                        </li>
+                        <li id="nav-liked">
+                            <span class="icon-circle liked-icon"><i class="fa-solid fa-heart"></i></span>
+                            <span>Liked Songs</span>
+                        </li>
+                        <li id="nav-myplaylist">
+                            <span class="icon-circle"><i class="fa-solid fa-music"></i></span>
+                            <span>My Playlist</span>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="sidebar-bottom">
+                <div class="install-app">
+                    <i class="fa-solid fa-arrow-down-to-bracket"></i>
+                    <span>Install App</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ===== MAIN CONTENT ===== -->
+        <main class="main" id="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar" id="top-bar">
+                <div class="top-bar-left">
+                    <button class="nav-arrow" id="btn-back" title="Go back" aria-label="Back">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="nav-arrow" id="btn-forward" title="Go forward" aria-label="Forward">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="search-wrapper">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="search-input" placeholder="What do you want to play?" aria-label="Search songs, artists, podcasts" autocomplete="off">
+                </div>
+
                 <div class="user-profile">
-                    <button>Sign Up</button>
-                    <button class="login-btn">Log In</button>
+                    <button class="btn-outline" id="btn-signup">Sign Up</button>
+                    <button class="btn-fill" id="btn-login">Log In</button>
                 </div>
-            </div>
+            </header>
 
-            <h1>Good Morning!!</h1>
+            <!-- Scrollable page content -->
+            <div class="page-content">
 
-            <div class="cards-container">
-                <div class="card-small">
-                    <img src="image/like.png" alt="Liked Songs">
-                    <span>Liked Songs</span>
-                    <button class="play-btn"><i class="fa-solid fa-play"></i></button>
-                </div>
-                <div class="card-small">
-                    <img src="image/rock.png" alt="Rock">
-                    <span>Rock Classics</span>
-                    <button class="play-btn"><i class="fa-solid fa-play"></i></button>
-                </div>
-                <div class="card-small">
-                    <img src="image/chill.png" alt="Chill">
-                    <span>Chill Vibes</span>
-                    <button class="play-btn"><i class="fa-solid fa-play"></i></button>
-                </div>
-                <div class="card-small">
-                    <img src="image/jazz.png" alt="Jazz">
-                    <span>Jazz for Study</span>
-                    <button class="play-btn"><i class="fa-solid fa-play"></i></button>
-                </div>
-                <div class="card-small">
-                    <img src="image/pop.png" alt="Pop">
-                    <span>Pop Hits</span>
-                    <button class="play-btn"><i class="fa-solid fa-play"></i></button>
-                </div>
-                <div class="card-small">
-                    <img src="image/podcast.png" alt="Pod">
-                    <span>Daily Podcast</span>
-                    <button class="play-btn"><i class="fa-solid fa-play"></i></button>
-                </div>
-            </div>
+                <!-- Greeting -->
+                <section class="greeting-section">
+                    <h1 id="greeting-text">Good Evening! 👋</h1>
+                </section>
 
-            <h2>Made For You</h2>
-            <div class="cards-medium-container">
-                <div class="card-medium">
-                    <img src="image/daily1.png" alt="Mix 1">
-                    <h3>Daily Mix 1</h3>
-                    <p>Made for Nishtha</p>
-                    <button class="play-btn"><i class="fa-solid fa-play"></i></button>
-                </div>
-                <div class="card-medium">
-                    <img src="image/daily2.png" alt="Mix 2">
-                    <h3>Daily Mix 2</h3>
-                    <p>Hits from 2010s</p>
-                    <button class="play-btn"><i class="fa-solid fa-play"></i></button>
-                </div>
-                <div class="card-medium">
-                    <img src="image/discover.png" alt="Mix 3">
-                    <h3>Discover Weekly</h3>
-                    <p>New music for you</p>
-                    <button class="play-btn"><i class="fa-solid fa-play"></i></button>
-                </div>
-                <div class="card-medium">
-                    <img src="image/radar.png" alt="Mix 4">
-                    <h3>Release Radar</h3>
-                    <p>Catch up on releases</p>
-                    <button class="play-btn"><i class="fa-solid fa-play"></i></button>
-                </div>
-            </div>
+                <!-- Quick-Play Grid -->
+                <section class="quick-play-section" aria-label="Quick play">
+                    <div class="quick-grid" id="quick-grid">
+                        <div class="quick-card" data-track="Liked Songs" data-artist="Your Favorites" tabindex="0">
+                            <img src="image/liked_songs.png" alt="Liked Songs">
+                            <span>Liked Songs</span>
+                            <button class="play-btn" aria-label="Play Liked Songs"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                        <div class="quick-card" data-track="Rock Classics" data-artist="Playlist • Spotify" tabindex="0">
+                            <img src="image/rock_classics.png" alt="Rock Classics">
+                            <span>Rock Classics</span>
+                            <button class="play-btn" aria-label="Play Rock Classics"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                        <div class="quick-card" data-track="Chill Vibes" data-artist="Playlist • Spotify" tabindex="0">
+                            <img src="image/chill_vibes.png" alt="Chill Vibes">
+                            <span>Chill Vibes</span>
+                            <button class="play-btn" aria-label="Play Chill Vibes"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                        <div class="quick-card" data-track="Jazz for Study" data-artist="Playlist • Spotify" tabindex="0">
+                            <img src="image/jazz_study.png" alt="Jazz for Study">
+                            <span>Jazz for Study</span>
+                            <button class="play-btn" aria-label="Play Jazz"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                        <div class="quick-card" data-track="Pop Hits" data-artist="Playlist • Spotify" tabindex="0">
+                            <img src="image/pop_hits.png" alt="Pop Hits">
+                            <span>Pop Hits</span>
+                            <button class="play-btn" aria-label="Play Pop Hits"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                        <div class="quick-card" data-track="Daily Podcast" data-artist="Podcast • Technology" tabindex="0">
+                            <img src="image/daily_podcast.png" alt="Daily Podcast">
+                            <span>Daily Podcast</span>
+                            <button class="play-btn" aria-label="Play Daily Podcast"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                    </div>
+                </section>
 
-            <h2>Recently Played</h2>
-            <div class="cards-medium-container">
-                <div class="card-medium">
-                    <img src="image/podcast.png" alt="Podcast">
-                    <h3>Tech Talks</h3>
-                    <p>Podcast • Technology</p>
-                    <button class="play-btn"><i class="fa-solid fa-play"></i></button>
-                </div>
-                <div class="card-medium">
-                    <img src="image/indie.png" alt="Indie">
-                    <h3>Indie Folk</h3>
-                    <p>Playlist • Spotify</p>
-                    <button class="play-btn"><i class="fa-solid fa-play"></i></button>
-                </div>
+                <!-- Made For You -->
+                <section class="cards-section" aria-label="Made For You">
+                    <div class="section-header">
+                        <h2>Made For You</h2>
+                        <a href="#" class="show-all">Show all</a>
+                    </div>
+                    <div class="cards-row" id="made-for-you">
+                        <div class="card" data-track="Daily Mix 1" data-artist="Made for Nishtha" tabindex="0">
+                            <div class="card-img-wrap">
+                                <img src="image/daily_mix_1.png" alt="Daily Mix 1">
+                                <button class="play-btn card-play" aria-label="Play Daily Mix 1"><i class="fa-solid fa-play"></i></button>
+                            </div>
+                            <h3>Daily Mix 1</h3>
+                            <p>Made for Nishtha</p>
+                        </div>
+                        <div class="card" data-track="Daily Mix 2" data-artist="Hits from 2010s" tabindex="0">
+                            <div class="card-img-wrap">
+                                <img src="image/daily_mix_2.png" alt="Daily Mix 2">
+                                <button class="play-btn card-play" aria-label="Play Daily Mix 2"><i class="fa-solid fa-play"></i></button>
+                            </div>
+                            <h3>Daily Mix 2</h3>
+                            <p>Hits from 2010s</p>
+                        </div>
+                        <div class="card" data-track="Discover Weekly" data-artist="New music for you" tabindex="0">
+                            <div class="card-img-wrap">
+                                <img src="image/daily_mix_1.png" alt="Discover Weekly" style="filter: hue-rotate(120deg);">
+                                <button class="play-btn card-play" aria-label="Play Discover Weekly"><i class="fa-solid fa-play"></i></button>
+                            </div>
+                            <h3>Discover Weekly</h3>
+                            <p>New music for you</p>
+                        </div>
+                        <div class="card" data-track="Release Radar" data-artist="Catch up on releases" tabindex="0">
+                            <div class="card-img-wrap">
+                                <img src="image/daily_mix_2.png" alt="Release Radar" style="filter: hue-rotate(200deg);">
+                                <button class="play-btn card-play" aria-label="Play Release Radar"><i class="fa-solid fa-play"></i></button>
+                            </div>
+                            <h3>Release Radar</h3>
+                            <p>Catch up on releases</p>
+                        </div>
+                        <div class="card" data-track="Repeat Rewind" data-artist="Songs you can't get enough of" tabindex="0">
+                            <div class="card-img-wrap">
+                                <img src="image/liked_songs.png" alt="Repeat Rewind" style="filter: hue-rotate(60deg);">
+                                <button class="play-btn card-play" aria-label="Play Repeat Rewind"><i class="fa-solid fa-play"></i></button>
+                            </div>
+                            <h3>Repeat Rewind</h3>
+                            <p>Songs you can't get enough of</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Recently Played -->
+                <section class="cards-section" aria-label="Recently Played">
+                    <div class="section-header">
+                        <h2>Recently Played</h2>
+                        <a href="#" class="show-all">Show all</a>
+                    </div>
+                    <div class="cards-row" id="recently-played">
+                        <div class="card" data-track="Daily Podcast" data-artist="Podcast • Technology" tabindex="0">
+                            <div class="card-img-wrap card-img-circle">
+                                <img src="image/daily_podcast.png" alt="Tech Talks">
+                                <button class="play-btn card-play" aria-label="Play Tech Talks"><i class="fa-solid fa-play"></i></button>
+                            </div>
+                            <h3>Tech Talks</h3>
+                            <p>Podcast • Technology</p>
+                        </div>
+                        <div class="card" data-track="Indie Folk" data-artist="Playlist • Spotify" tabindex="0">
+                            <div class="card-img-wrap">
+                                <img src="image/chill_vibes.png" alt="Indie Folk" style="filter: hue-rotate(90deg) saturate(0.8);">
+                                <button class="play-btn card-play" aria-label="Play Indie Folk"><i class="fa-solid fa-play"></i></button>
+                            </div>
+                            <h3>Indie Folk</h3>
+                            <p>Playlist • Spotify</p>
+                        </div>
+                        <div class="card" data-track="Pop Hits" data-artist="Top charting songs" tabindex="0">
+                            <div class="card-img-wrap">
+                                <img src="image/pop_hits.png" alt="Pop Hits">
+                                <button class="play-btn card-play" aria-label="Play Pop Hits"><i class="fa-solid fa-play"></i></button>
+                            </div>
+                            <h3>Pop Hits</h3>
+                            <p>Top charting songs</p>
+                        </div>
+                        <div class="card" data-track="Rock Classics" data-artist="Timeless rock anthems" tabindex="0">
+                            <div class="card-img-wrap">
+                                <img src="image/rock_classics.png" alt="Rock Classics">
+                                <button class="play-btn card-play" aria-label="Play Rock Classics"><i class="fa-solid fa-play"></i></button>
+                            </div>
+                            <h3>Rock Classics</h3>
+                            <p>Timeless rock anthems</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Trending Now -->
+                <section class="cards-section" aria-label="Trending Now">
+                    <div class="section-header">
+                        <h2>Trending Now 🔥</h2>
+                        <a href="#" class="show-all">Show all</a>
+                    </div>
+                    <div class="cards-row" id="trending">
+                        <div class="card" data-track="Chill Vibes" data-artist="Lofi & relaxing beats" tabindex="0">
+                            <div class="card-img-wrap">
+                                <img src="image/chill_vibes.png" alt="Chill Vibes">
+                                <button class="play-btn card-play" aria-label="Play Chill Vibes"><i class="fa-solid fa-play"></i></button>
+                            </div>
+                            <h3>Chill Vibes</h3>
+                            <p>Lofi &amp; relaxing beats</p>
+                        </div>
+                        <div class="card" data-track="Jazz for Study" data-artist="Focus &amp; flow" tabindex="0">
+                            <div class="card-img-wrap">
+                                <img src="image/jazz_study.png" alt="Jazz for Study">
+                                <button class="play-btn card-play" aria-label="Play Jazz for Study"><i class="fa-solid fa-play"></i></button>
+                            </div>
+                            <h3>Jazz for Study</h3>
+                            <p>Focus &amp; flow</p>
+                        </div>
+                        <div class="card" data-track="Daily Mix 1" data-artist="Your top picks" tabindex="0">
+                            <div class="card-img-wrap">
+                                <img src="image/daily_mix_1.png" alt="Daily Mix">
+                                <button class="play-btn card-play" aria-label="Play Daily Mix"><i class="fa-solid fa-play"></i></button>
+                            </div>
+                            <h3>Daily Mix 1</h3>
+                            <p>Your top picks</p>
+                        </div>
+                        <div class="card" data-track="Daily Podcast" data-artist="Fresh episodes daily" tabindex="0">
+                            <div class="card-img-wrap card-img-circle">
+                                <img src="image/daily_podcast.png" alt="Daily Podcast">
+                                <button class="play-btn card-play" aria-label="Play Daily Podcast"><i class="fa-solid fa-play"></i></button>
+                            </div>
+                            <h3>Daily Podcast</h3>
+                            <p>Fresh episodes daily</p>
+                        </div>
+                        <div class="card" data-track="Liked Songs" data-artist="334 songs" tabindex="0">
+                            <div class="card-img-wrap">
+                                <img src="image/liked_songs.png" alt="Liked Songs">
+                                <button class="play-btn card-play" aria-label="Play Liked Songs"><i class="fa-solid fa-play"></i></button>
+                            </div>
+                            <h3>Liked Songs</h3>
+                            <p>334 songs</p>
+                        </div>
+                    </div>
+                </section>
+
             </div>
-        </div>
+        </main>
     </div>
 
-    <div class="music-player">
+    <!-- ===== MUSIC PLAYER ===== -->
+    <footer class="music-player" id="music-player" role="complementary" aria-label="Music Player">
+
+        <!-- Left: Song Info -->
         <div class="song-bar">
             <div class="song-infos">
-                <div class="image-container">
-                    <img src="image/ishq.png" alt="Album Art">
+                <div class="image-container" id="player-img-wrap">
+                    <img src="image/daily_mix_1.png" alt="Now Playing Album Art" id="player-img">
                 </div>
                 <div class="song-description">
-                    <p class="title">Ishq Wala Love</p>
-                    <p class="artist">Vishal-Shekar</p>
+                    <p class="title" id="song-title">Daily Mix 1</p>
+                    <p class="artist" id="song-artist">Made for Nishtha</p>
                 </div>
-                <button class="icon-btn like-btn">
-                    <i class="fa-solid fa-heart"></i>
+                <button class="icon-btn like-btn" id="like-btn" title="Like" aria-label="Like song" aria-pressed="false">
+                    <i class="fa-regular fa-heart"></i>
                 </button>
             </div>
         </div>
 
+        <!-- Middle: Controls + Progress -->
         <div class="progress-controller">
             <div class="control-buttons">
-                <button class="icon-btn shuffle-btn" title="Shuffle">
+                <button class="icon-btn shuffle-btn" id="shuffle-btn" title="Shuffle" aria-label="Shuffle" aria-pressed="false">
                     <i class="fa-solid fa-shuffle"></i>
                 </button>
-
-                <button class="icon-btn prev-btn" title="Previous">
+                <button class="icon-btn prev-btn" id="prev-btn" title="Previous" aria-label="Previous track">
                     <i class="fa-solid fa-backward-step"></i>
                 </button>
-
-                <button class="play-pause-btn" title="Play">
+                <button class="play-pause-btn" id="play-pause-btn" title="Play" aria-label="Play">
                     <i class="fa-solid fa-play"></i>
                 </button>
-
-                <button class="icon-btn next-btn" title="Next">
+                <button class="icon-btn next-btn" id="next-btn" title="Next" aria-label="Next track">
                     <i class="fa-solid fa-forward-step"></i>
                 </button>
-
-                <button class="icon-btn repeat-btn" title="Repeat">
+                <button class="icon-btn repeat-btn" id="repeat-btn" title="Repeat" aria-label="Repeat" aria-pressed="false">
                     <i class="fa-solid fa-repeat"></i>
                 </button>
             </div>
 
             <div class="progress-container">
-                <span class="time-current">0:24</span>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 20%;"></div>
-                    <div class="progress-handle"></div>
+                <span class="time-current" id="time-current">0:24</span>
+                <div class="progress-bar" id="progress-bar" role="slider" aria-label="Song progress" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress" id="progress-fill" style="width: 12%;"></div>
+                    <div class="progress-handle" id="progress-handle"></div>
                 </div>
-                <span class="time-total">3:15</span>
+                <span class="time-total" id="time-total">3:15</span>
             </div>
         </div>
 
+        <!-- Right: Extra Controls -->
         <div class="other-features">
-            <button class="icon-btn queue-btn" title="Queue">
+            <button class="icon-btn queue-btn" id="queue-btn" title="Queue" aria-label="Queue">
+                <i class="fa-solid fa-list-ul"></i>
             </button>
-
-            <button class="icon-btn devices-btn" title="Connect to a device">
+            <button class="icon-btn devices-btn" id="devices-btn" title="Connect to a device" aria-label="Devices">
                 <i class="fa-solid fa-laptop"></i>
             </button>
-
             <div class="volume-control">
-                <button class="icon-btn volume-btn" title="Mute">
+                <button class="icon-btn volume-btn" id="volume-btn" title="Mute" aria-label="Mute">
                     <i class="fa-solid fa-volume-high"></i>
                 </button>
-                <div class="volume-bar">
-                    <div class="progress-bar volume-progress">
-                        <div class="progress" style="width: 70%;"></div>
-                        <div class="progress-handle"></div>
+                <div class="volume-bar" id="volume-bar" role="slider" aria-label="Volume" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar volume-progress" id="volume-progress-bar">
+                        <div class="progress" id="volume-fill" style="width: 70%;"></div>
+                        <div class="progress-handle" id="volume-handle"></div>
                     </div>
                 </div>
             </div>
-
-            <button class="icon-btn fullscreen-btn" title="Full screen">
-                <i class="fa-solid fa-compress"></i>
+            <button class="icon-btn fullscreen-btn" id="fullscreen-btn" title="Full screen" aria-label="Full screen">
+                <i class="fa-solid fa-expand"></i>
             </button>
         </div>
-    </div>
+    </footer>
 
-
+    <script src="script.js"></script>
 </body>
 
 </html>
