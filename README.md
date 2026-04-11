@@ -1,51 +1,124 @@
-# Spotify Web Player Clone
+# 🎵 Spotify Web Player Clone
 
-A responsive, interactive clone of the Spotify Web Player interface, built with HTML, CSS, and Vanilla JavaScript.
+<div align="center">
 
-## 🎵 Features
+![Spotify Clone Banner](image/screenshot1.png)
 
-*   **Premium UI Design:** Matches the modern dark theme of Spotify with glassmorphism effects, dynamic gradients, and smooth micro-animations.
-*   **Fully Functional Music Player:**
-    *   Play, pause, skip forward, and skip backward functionality.
-    *   Interactive progress bar with drag-to-seek support.
-    *   Interactive volume control.
-    *   Shuffle, repeat, and "like" song toggles with visual feedback.
-*   **Dynamic Data:** Clicking any track card or playlist dynamically loads its cover art, title, and artist into the player.
-*   **Intelligent Greeting:** The homepage greeting ("Good Morning", "Good Evening", etc.) dynamically updates based on the user's local time.
-*   **Live Search Filtering:** Real-time filtering of visible playlist cards by typing in the top search bar.
-*   **Keyboard Accessibility:** 
-    *   `Space` - Play/Pause
-    *   `Arrow Left` / `Arrow Right` - Seek backward/forward
-    *   `Arrow Up` / `Arrow Down` - Adjust volume
-    *   `M` - Mute/Unmute
-    *   `N` / `P` - Next/Previous track
-*   **Responsive Layout:** Adapts beautifully from desktop down to mobile screen sizes.
+<br/>
 
-## 🛠️ Technologies Used
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Click_Here-1DB954?style=for-the-badge&logoColor=white)](https://spotify-clone-liart-sigma.vercel.app)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-*   **HTML5:** Semantic layout and structure.
-*   **CSS3:** Custom variables, Flexbox, CSS Grid, media queries, keyframe animations, and backdrop filters for glassmorphism.
-*   **Vanilla JavaScript (ES6+):** DOM manipulation, event handling, interval management for the progress bar, and state management.
-*   **FontAwesome:** Used for fully scalable vector icons.
-*   **Google Fonts:** Utilizing the 'Inter' typeface for a sleek, modern look.
+<p align="center">
+  A <strong>responsive, interactive clone</strong> of the Spotify Web Player — built with pure HTML, CSS, and Vanilla JavaScript. No frameworks. No dependencies. Just clean, modern front-end engineering.
+</p>
 
-## 🚀 How to Run Locally
+</div>
 
-You don't need any complex build tools to run this project!
+---
 
-1.  Clone this repository or download the source code.
-2.  Open the `index.html` file directly in your web browser. 
-3.  Alternatively, you can run a local server (like the VS Code "Live Server" extension) to view it.
+## ✨ Features
+
+### 🎛️ Fully Functional Music Player
+- **Play / Pause / Skip** — forward and backward track navigation
+- **Interactive Progress Bar** — drag to seek anywhere in the track
+- **Volume Control** — interactive slider with mute/unmute support
+- **Shuffle, Repeat & Like** — toggleable with real-time visual feedback
+
+### 🎨 Premium UI Design
+- Dark-themed interface matching Spotify's aesthetic
+- **Glassmorphism** cards with backdrop blur
+- Smooth **micro-animations** and dynamic gradient backgrounds
+- AI-generated, high-quality album art for each track
+
+### ⚡ Dynamic & Interactive
+- **Intelligent Greeting** — "Good Morning / Evening / Night" based on local time
+- **Live Search Filtering** — filter playlist cards in real time as you type
+- **Dynamic Track Loading** — clicking any card updates the player with cover art, title, and artist
+
+### ⌨️ Keyboard Shortcuts
+
+| Key | Action |
+|-----|--------|
+| `Space` | Play / Pause |
+| `←` / `→` | Seek backward / forward |
+| `↑` / `↓` | Increase / Decrease volume |
+| `M` | Mute / Unmute |
+| `N` / `P` | Next / Previous track |
+
+### 📱 Fully Responsive
+Adapts beautifully from desktop to tablet to mobile screen sizes.
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| **HTML5** | Semantic layout and page structure |
+| **CSS3** | Flexbox, Grid, custom properties, keyframe animations, backdrop filters |
+| **Vanilla JavaScript (ES6+)** | DOM manipulation, event handling, state management, interval timers |
+| **Font Awesome** | Scalable vector icons throughout the UI |
+| **Google Fonts (Inter)** | Modern, clean typography |
+
+---
 
 ## 📸 Screenshots
 
-### Home Dashboard
+### 🏠 Home Dashboard
 ![Spotify Clone Main Interface](image/screenshot1.png)
-*A sleek, modern dark-themed dashboard featuring dynamic greetings, quick-play cards, and curated playlists.*
+*Sleek dark-themed dashboard with dynamic greeting, quick-play cards, and curated playlists.*
 
-### Responsive Music Library
+### 📚 Music Library View
 ![Spotify Clone Scrolled Interface](image/screenshot2.png)
-*Scrollable list view featuring high-quality AI-generated cover art and glassmorphism UI elements.*
+*Scrollable list view with high-quality AI-generated cover art and glassmorphism UI elements.*
 
 ---
-*Disclaimer: This is a front-end UI clone made for educational purposes. It is not affiliated with Spotify.*
+
+## 🚀 Run Locally
+
+No build tools required — just open and go!
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/nishtha-agarwal-211/Spotify-Clone.git
+
+# 2. Navigate into the project
+cd Spotify-Clone
+
+# 3. Open in browser
+open index.html
+```
+
+> 💡 **Tip:** For the best experience, use the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension in VS Code.
+
+---
+
+## 📁 Project Structure
+
+```
+Spotify-Clone/
+├── index.html       # Main HTML layout
+├── style.css        # All styles, animations & responsive design
+├── script.js        # Core JavaScript logic & interactivity
+├── image/           # Album art and screenshots
+└── README.md        # Project documentation
+```
+
+---
+
+## 🌐 Live Demo
+
+**[👉 Click here to view the live app](https://spotify-clone-liart-sigma.vercel.app)**
+
+Deployed via **Vercel** — fast, free, and globally distributed.
+
+---
+
+<div align="center">
+  <sub>⚠️ <em>This is a front-end UI clone built for educational purposes only. Not affiliated with or endorsed by Spotify.</em></sub>
+  <br/><br/>
+  <sub>Made with ❤️ by <a href="https://github.com/nishtha-agarwal-211">Nishtha Agarwal</a></sub>
+</div>
