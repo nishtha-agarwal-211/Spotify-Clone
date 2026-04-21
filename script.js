@@ -319,12 +319,12 @@ document.addEventListener('keydown', (e) => {
             updateProgress();
             break;
         case 'ArrowUp':
-            e.preventDefault();
+            // Don't preventDefault — allow natural page scroll
             state.volume = Math.min(100, state.volume + 5);
             updateVolumeUI();
             break;
         case 'ArrowDown':
-            e.preventDefault();
+            // Don't preventDefault — allow natural page scroll
             state.volume = Math.max(0, state.volume - 5);
             updateVolumeUI();
             break;
@@ -402,12 +402,23 @@ function heartbeat(el) {
 }
 
 // ============ Horizontal Scroll with Mouse Wheel ============
+// Only convert wheel-to-horizontal when the gesture is clearly horizontal
+// (shift+scroll or trackpad horizontal swipe). Never block vertical scroll.
 $$('.cards-row').forEach(row => {
     row.addEventListener('wheel', (e) => {
-        if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
-        e.preventDefault();
-        row.scrollLeft += e.deltaY * 0.8;
-    }, { passive: false });
+        // If shift key held, convert vertical wheel to horizontal scroll
+        if (e.shiftKey) {
+            e.preventDefault();
+            row.scrollLeft += e.deltaY * 0.8;
+            return;
+        }
+        // If it's a native horizontal gesture (trackpad), let it scroll horizontally
+        if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+            // Pure horizontal gesture — allow it naturally, no need to intercept
+            return;
+        }
+        // Otherwise it's a vertical scroll — let it bubble up to page-content
+    }, { passive: true });
 });
 
 // ============ Dynamic Background Gradient ============

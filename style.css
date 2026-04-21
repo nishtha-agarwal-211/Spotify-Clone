@@ -372,9 +372,13 @@ body {
 .page-content {
     flex: 1;
     overflow-y: auto;
+    overflow-x: hidden;
     padding: 28px 28px 40px;
     scrollbar-width: thin;
     scrollbar-color: #444 transparent;
+    overscroll-behavior: contain;       /* prevent scroll chain to parent */
+    will-change: scroll-position;       /* hint GPU for smoother compositing */
+    -webkit-overflow-scrolling: touch;  /* smooth momentum on iOS/Safari */
 }
 
 .page-content::-webkit-scrollbar { width: 10px; }
